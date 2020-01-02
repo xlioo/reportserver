@@ -1,0 +1,22 @@
+<RCX>
+    <!--配置数据源信息,包括数据源名称-->
+    <dataSource>
+        <dataSourceName>report_db</dataSourceName>
+    </dataSource>
+    <!--获取数据集,包括数据集名称,数据源名称,SQL,数据生成插件-->
+    <dataSets>
+        <dataSet>
+            <dataSetName>t_user</dataSetName>
+            <dataSourceName>report_db</dataSourceName>
+            <dataSQL>select * from t_user</dataSQL>
+            <dataPlugInClass>jdbcTest</dataPlugInClass>
+        </dataSet>
+    </dataSets>
+    <!--报表插件配置，报表是由多个报表插件组合而成(仅有插件).-->
+    <!--插件基础属性为插件名称，插件布局位置，插件数据.-->
+    <viewPlugIn>
+        <plugInName>basics-table</plugInName>
+        <plugInLocation>10px,10px</plugInLocation>
+        <plugInData>t_user</plugInData>
+    </viewPlugIn>
+</RCX>
